@@ -1,0 +1,37 @@
+# Junior Software Engineer
+
+## Company: XYZ Tech Solutions
+
+## Location: City, State
+
+## Job Type: Full Time
+
+## Job Description:
+
+We are seeking a motivated and talented Junior Software Engineer to join our growing team. The ideal candidate will have a strong understanding of computer science principles and a passion for technology.
+
+## Responsibilities:
+- Assist in the design, development, and implementation of software systems.
+- Write clean, scalable code using .NET programming languages.
+- Test and deploy applications and systems.
+- Revise, update, refactor and debug code.
+- Develop documentation throughout the software development life cycle (SDLC).
+- Serve as an integral part of a team, leading and executing programming tasks.
+
+## Requirements:
+- Bachelor's degree in Computer Science, Engineering, or a related field.
+- Proven experience as a Software Developer, Software Engineer, or similar role.
+- Familiarity with Agile development methodologies.
+- Knowledge of coding languages (e.g. C++, Java, JavaScript) and frameworks/systems (e.g. AngularJS, Git).
+- Ability to learn new languages and technologies.
+- Excellent communication skills.
+- Resourcefulness and troubleshooting aptitude.
+- Attention to detail.
+
+## Benefits:
+- Competitive salary.
+- Health, dental, and vision insurance.
+- Retirement savings plan.
+- Paid time off.
+
+XYZ Tech Solutions is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.

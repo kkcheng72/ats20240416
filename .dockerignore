@@ -1,0 +1,78 @@
+# .dockerignore
+
+# Ignore .env file
+.env
+
+# Ignore git and cache directories
+.git
+.gitignore
+__pycache__
+
+# Ignore log files
+*.log
+
+# Ignore all .pyc files
+*.pyc
+
+# Ignore all .pyo files
+*.pyo
+
+# Ignore all .pyd files
+*.pyd
+
+# Ignore all .so files
+*.so
+
+# Ignore all .o files
+*.o
+
+# Ignore all .egg files
+*.egg
+
+# Ignore all .egg-info directories
+*.egg-info/
+
+# Ignore all .dist-info directories
+*.dist-info/
+
+# Ignore .cache directories
+.cache
+
+# Ignore .pytest_cache directories
+.pytest_cache
+
+# Ignore .mypy_cache directories
+.mypy_cache
+
+# Ignore .nox directories
+.nox
+
+# Ignore .tox directories
+.tox
+
+# Ignore .venv directories
+.venv
+
+# Ignore .idea directories
+.idea
+
+# Ignore .vscode directories
+.vscode
+
+# Ignore .circleci directories
+.circleci
+
+# Ignore .github directories
+.github
+
+# Ignore .gitlab directories
+.gitlab
+
+# Ignore .dockerignore file
+.dockerignore
+
+# Ignore Dockerfile
+Dockerfile
+
+# Ignore docker-compose.yml
+docker-compose.yml
