@@ -86,3 +86,9 @@ if submit:
         text = input_pdf_text(uploaded_file)
         response = get_gemini_response(input_prompt)
         st.subheader(response)
+
+st.markdown("""
+## Samples for Testing
+- [Sample Job Description](https://github.com/kkcheng72/ats20240416/blob/main/sample_jd.txt)
+- [Sample CV](https://github.com/kkcheng72/ats20240416/blob/main/sample_cv.pdf)
+""")
