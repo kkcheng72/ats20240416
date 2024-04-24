@@ -20,6 +20,7 @@ We have provided a sample job description text file (`sample_jd.txt`) and a samp
 ## Deployment
 
 The system is deployed and can be accessed at https://ats20240416.onrender.com.
+You may need to wait for up to 50 seconds for the first access.
 
 ## Note of Caution
 
