@@ -35,17 +35,19 @@ def input_pdf_text(uploaded_file):
 
 ## Prompt Template
 input_prompt = """
-Gemini should act like an experienced human resource person who is familiar with 
-Application Tracking Systems.  Also, you are a skilled person in the relevant field 
-knowing what takes to be a good {position}. Your task is to evaluate the resume 
-based on the given job description, considering the current job market competitiveness. 
-Provide suggestions to improve the resume's fit for the role. Assign the percentage 
-matching based on job description and highlight missing keywords with high accuracy, 
-prioritizing highly relevant skills and experience.
+You should act like an expert in the specified {field}.  You know what takes to be a 
+good {position}. Your task is to evaluate the resume based on the given job description. 
+1. You should extract the keywords from the {jd} and {text}. Then, compare the two sets of 
+words and give your JD Match %.
+2. You should summarise the resume in point form.  That is Profile Summary.
+3. You should list all the keywords in the {jd} but not in {text} as Missing Keywords
+4. You should suggest how to improve the resume's fit for the {position}. That is 
+suggestion for improvement. 
 
-resume:{{text}}
-description:{{jd}}
+field:{{field}}
 position: {{position}}
+description:{{jd}}
+resume:{{text}}
 
 I want the response in one single string having the structure
 
@@ -60,19 +62,18 @@ JD Match: {{JD Match}}%
 {{Suggestion for Improvement}}
 
 The followings are important:
-1. All the suggested missing keywords must be actually found in the job description 
-but not in the submitted resume. 
-2. Profile summary is a summary of the submitted resume. 
-3. The missing keywords must not be found in the profile summary.
-4. All the suggestions for improvement are found in the job description but not 
-in the submitted resume.
-5. Do not mix up input_prompt with the job description or text from the resume.
+1. All the {{Missing Keywords}} must be actually found in {{jd}} 
+but not in {{text}}. 
+2. All the {{Suggestion for Improvement}} must be found in {{jd}} but not 
+in {{text}}.
+3. Do not mix up input_prompt with {{jd}} or {{text}}.
 """
 
 ## streamlit app
 st.title("Smart Application Tracking System (ATS)")
 st.text("Improve Your Resume ATS")
 position = st.text_input("Enter your Position (e.g., junior software engineer, senior AI engineer, etc.)")
+field = st.text_input("Enter the field (e.g., human resource, software engineering)")
 jd = st.text_area("Paste the Job Description")
 uploaded_file = st.file_uploader(
     "Upload Your Resume in PDF Format", type="PDF", help="Please upload the PDF"
@@ -84,7 +85,13 @@ submit = st.button("Submit")
 if submit:
     if uploaded_file is not None:
         text = input_pdf_text(uploaded_file)
-        response = get_gemini_response(input_prompt)
+        formatted_input_prompt = input_prompt.format(
+            field=field, 
+            position=position, 
+            jd=jd, 
+            text=text
+        )
+        response = get_gemini_response(formatted_input_prompt)
         st.subheader(response)
 
 
